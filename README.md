@@ -20,5 +20,5 @@ This is a modified (joining) version of [Video Streaming with Flask Example][1] 
 
 
 
-[1]:[https://github.com/log0/video_streaming_with_flask_example]
+[1]:https://github.com/log0/video_streaming_with_flask_example
 [2]:https://github.com/opencv/opencv
