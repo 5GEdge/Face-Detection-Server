@@ -1,0 +1,14 @@
+
+RPI
+//sudo python main.py 80
+python app.py
+
+PC1
+sudo python main.py 8080 http://169.254.75.153:5000/video_feed
+
+
+sudo python main.py 8090 http://169.254.10.228:8080/decode
+
+sudo python mn.py 8100 http://169.254.10.228:8090/jpgencode
+
+
