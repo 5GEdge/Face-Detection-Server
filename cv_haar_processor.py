@@ -57,10 +57,11 @@ def face_detect_process(stream):
             #         subrects = detect(roi.copy(), nested)
             #         draw_rects(vis_roi, subrects, (255, 0, 0))
 
-            r, buf = cv2.imencode(".jpg", vis)
+            # r, buf = cv2.imencode(".jpg", vis)
 
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + np.ndarray.tostring(buf) + b'\r\n\r\n')
+            pickled = pickle.dumps(vis, protocol=0)
+
+            yield ("[start]" + pickled + "[finish]")
 
             if cv2.waitKey(5) == 27:
                 break
